@@ -1,0 +1,11 @@
+repositories:
+  remote:
+   - http://repo1.maven.org/maven2
+   - https://stocksoftware.artifactoryonline.com/stocksoftware/public
+   - https://stocksoftware.artifactoryonline.com/stocksoftware/oss
+
+artifacts:
+  idea_codestyle: au.com.stocksoftware.idea.codestyle:idea-codestyle:xml:1.13
+
+  dagger_core: com.google.dagger:dagger:jar:2.15
+  javax_inject: javax.inject:javax.inject:jar:1
