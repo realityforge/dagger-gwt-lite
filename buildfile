@@ -16,7 +16,7 @@ define 'dagger-gwt-lite' do
 
   compile.with :dagger_core, :javax_inject
 
-  package(:jar).include(project._('src/main/java/dagger'))
+  package(:jar).include(project._('src/main/java/dagger')).include(project._('src/main/java/javax'))
   package(:sources)
   package(:javadoc)
 
