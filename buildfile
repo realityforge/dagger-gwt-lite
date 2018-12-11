@@ -8,10 +8,9 @@ define 'dagger-gwt-lite' do
   compile.options.target = '1.8'
   compile.options.lint = 'all'
 
-  pom.include_transitive_dependencies << artifact(:dagger_core)
-  pom.include_transitive_dependencies << artifact(:dagger_core_sources)
   pom.include_transitive_dependencies << artifact(:javax_inject)
   pom.include_transitive_dependencies << artifact(:javax_inject_sources)
+  pom.dependency_filter = Proc.new {|dep| dep[:group].to_s == 'javax.inject'}
 
   project.version = ENV['PRODUCT_VERSION'] if ENV['PRODUCT_VERSION']
 
@@ -21,7 +20,10 @@ define 'dagger-gwt-lite' do
 
   compile.with :dagger_core, :dagger_core_sources, :javax_inject, :javax_inject_sources
 
-  package(:jar).include(project._('src/main/java/dagger')).include(project._('src/main/java/javax'))
+  package(:jar).merge(artifact(:dagger_core)).exclude('dagger/internal/DoubleCheck.class').exclude('dagger/internal/Preconditions.class')
+  package(:jar).merge(artifact(:dagger_gwt))
+  package(:jar).merge(artifact(:dagger_core_sources)).exclude('dagger/internal/DoubleCheck.java').exclude('dagger/internal/Preconditions.java')
+  package(:jar).include(_('src/main/java/dagger'))
   package(:sources)
   package(:javadoc)
 
