@@ -1,5 +1,9 @@
 # Change Log
 
+## 2.25.2-rf1:
+
+* Upgrade to dagger `2.25.2`.
+
 ## 2.19-rf1:
 
 * The source for the `dagger` artifact and the `dagger-gwt` artifact have been inlined into

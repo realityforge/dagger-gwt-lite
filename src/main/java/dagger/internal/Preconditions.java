@@ -66,5 +66,14 @@ public final class Preconditions {
     return Objects.requireNonNull( reference, errorMessageTemplate );
   }
 
+  /**
+   * Checks that the component builder field {@code requirement} has been initialized.
+   *
+   * @throws IllegalStateException if {@code requirement is null}
+   */
+  public static <T> void checkBuilderRequirement( T requirement, Class<T> clazz ) {
+    Objects.requireNonNull( requirement, clazz.getCanonicalName() + " must be set" );
+  }
+
   private Preconditions() {}
 }

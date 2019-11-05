@@ -7,8 +7,8 @@ repositories:
 artifacts:
   idea_codestyle: au.com.stocksoftware.idea.codestyle:idea-codestyle:xml:1.14
 
-  dagger_core: com.google.dagger:dagger:jar:2.19
-  dagger_core_sources: com.google.dagger:dagger:jar:sources:2.19
-  dagger_gwt: com.google.dagger:dagger-gwt:jar:2.19
+  dagger_core: com.google.dagger:dagger:jar:2.25.2
+  dagger_core_sources: com.google.dagger:dagger:jar:sources:2.25.2
+  dagger_gwt: com.google.dagger:dagger-gwt:jar:2.25.2
   javax_inject: javax.inject:javax.inject:jar:1
   javax_inject_sources: javax.inject:javax.inject:jar:sources:1
