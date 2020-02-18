@@ -1,3 +1,7 @@
+> Project Archived: Project no longer used as moved to [Sting](https://sting-ioc.github.io/) for dependency injection which is already optimized.
+
+---
+
 # dagger-gwt-lite: SuperSourced elements to optimize Dagger for GWT/J2CL
 
 [![Build Status](https://secure.travis-ci.org/realityforge/dagger-gwt-lite.png?branch=master)](http://travis-ci.org/realityforge/dagger-gwt-lite)
